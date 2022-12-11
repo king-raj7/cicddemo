@@ -36,6 +36,22 @@ var secondNumber = attributes.queryParams.secondNumber as Number
 		"result": "NA")
 	}]]></ee:set-payload>
 			</ee:message>
+			<ee:variables >
+				<ee:set-variable variableName="httpStatusCode" ><![CDATA[%dw 2.0
+output application/java
+var methodSelected = attributes.queryParams.method
+---
+(if(methodSelected == "Add")
+		200
+	else if ((methodSelected == "Substract"))
+		200
+	else if ((methodSelected == "Multiply"))
+		200
+	else if ((methodSelected == "Divide"))
+		200
+	else
+		500)]]></ee:set-variable>
+			</ee:variables>
 		</ee:transform>
 	</flow>
 </mule>
