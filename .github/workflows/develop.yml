@@ -158,4 +158,3 @@ jobs:
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
         -D${{ env.anypointPlatformEnvProperty }}=${{ env.workflowEnv }}
-        -D${{ env.targetProperty }}=${{ env.deploymentTarget }}
