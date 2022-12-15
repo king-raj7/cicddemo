@@ -65,7 +65,7 @@ env:
   #apiAutodiscoveryIdProperty: "api.autodiscoveryID"                                           # Name of the property that contains the API Autodiscovery Id
   #apiLayerProperty: "apiLayer"                                                                # Name of the property that contains the Anypoint Visualizer API Layer
   #apiTagsProperty: "apiTags"                                                                  # Name of the property that contains the Anypoint Visualizer Tags
-  #targetProperty: "target"                                                                    # Name of the property that contains the AWS target server
+  targetProperty: "target"                                                                    # Name of the property that contains the AWS target server
   #targetTypeProperty: "target.type"                                                           # Name of the property that contains the AWS server type
   #deploymentTimeoutProperty: "deploymentTimeout"                                              # Name of the property that contains the Deployment timeout value
   #anypointMQClientIdProperty: "mq_client_id"                                                  # Name of the property that contains the Anypoint MQ Client Id
@@ -158,3 +158,4 @@ jobs:
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
         -D${{ env.anypointPlatformEnvProperty }}=${{ env.workflowEnv }}
+        -D${{ env.targetProperty }}=${{ env.deploymentTarget }}
