@@ -148,7 +148,7 @@ jobs:
         PASSWORD: ${{ secrets.ANYPOINT_PASSWORD_SANDBOX }}
       run: |
         artifactName=$(ls *.jar | head -1)
-        mvn deploy -DmuleDeploy -DskipMunitTests
+        mvn -e deploy -DmuleDeploy -DskipMunitTests
         -D${{ env.anypointPlatformBaseUriProperty }}=${{ env.anypointPlatformBaseUri }}
         -D${{ env.muleVersionProperty }}=${{ env.muleVersion }}
         -D${{ env.deploymentRegionProperty }}=${{ env.region }}
