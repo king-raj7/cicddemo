@@ -152,8 +152,6 @@ jobs:
         -D${{ env.anypointPlatformBaseUriProperty }}=${{ env.anypointPlatformBaseUri }}
         -D${{ env.muleVersionProperty }}=${{ env.muleVersion }}
         -D${{ env.deploymentRegionProperty }}=${{ env.region }}
-        -D${{ env.anypointPlatformUsername }}=${{ env.USERNAME }}
-        -D${{ env.anypointPlatformPassword }}=${{ env.PASSWORD }}
         -D${{ env.applicationNameProperty }}=${{ env.applicationName }}
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
