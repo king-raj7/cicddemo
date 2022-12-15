@@ -152,9 +152,8 @@ jobs:
         -D${{ env.anypointPlatformBaseUriProperty }}=${{ env.anypointPlatformBaseUri }}
         -D${{ env.muleVersionProperty }}=${{ env.muleVersion }}
         -D${{ env.anypointPlatformUsername }}=${{ secrets.ANYPOINT_USERNAME_SANDBOX }}
-        -D${{ env.anypointPlatformPassword }}=${{ secrets.ANYPOINT_PASSWORD_SANDBO }}
+        -D${{ env.anypointPlatformPassword }}=${{ secrets.ANYPOINT_PASSWORD_SANDBOX }}
         -D${{ env.applicationNameProperty }}=${{ env.applicationName }}
-        -D${{ env.deploymentRegionProperty }}=${{ env.region }}
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
         -D${{ env.anypointPlatformEnvProperty }}=${{ env.workflowEnv }}
