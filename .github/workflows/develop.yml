@@ -26,7 +26,7 @@ env:
                                                                                               #                  XLARGE (4 vCores)
                                                                                               #                  XXLARGE (8 vCores)
                                                                                               #                  4XLARGE (16 vCores)
-  region: us-east-2                                                                           # must match DLB and VPC region. refer to parameter syntax at https://docs.mulesoft.com/mule-runtime/4.3/deploy-to-cloudhub#cloudhub-deploy-reference
+  region: us-east-1                                                                           # must match DLB and VPC region. refer to parameter syntax at https://docs.mulesoft.com/mule-runtime/4.3/deploy-to-cloudhub#cloudhub-deploy-reference
   applicationName:  cicddemo-myfirst                                                # Application Name in Runtime Manager. Use the standard format ddb-{mule app name}-{env}-{region name}
                                                                                               # Use DDB standard naming convention for region name (use1 for us-east-1; euc1 for eu-central-1; apn1 for apac-north-1; ru for Russia).
   # **************************************** API MANAGER PROPERTIES **********************************************************************************************************
