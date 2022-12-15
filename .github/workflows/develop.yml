@@ -148,7 +148,7 @@ jobs:
         PASSWORD: "Ra@mithu1"
       run: |
         artifactName=$(ls *.jar | head -1)
-        mvn -e deploy -DmuleDeploy -DskipMunitTests
+        mvn -X deploy -DmuleDeploy -DskipMunitTests
         -D${{ env.anypointPlatformBaseUriProperty }}=${{ env.anypointPlatformBaseUri }}
         -D${{ env.muleVersionProperty }}=${{ env.muleVersion }}
         -D${{ env.businessgroupIdProperty }}=${{ env.businessGroupId }}
