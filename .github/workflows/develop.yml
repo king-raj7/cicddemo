@@ -50,8 +50,8 @@ env:
   anypointPlatformBaseUriProperty: "anypointPlatformBaseUri"                                  # Name of the property that contains the Anypoint Base URI
   muleVersionProperty: "app.runtime"                                                          # Name of the property that contains the MuleSoft runtime version
   deploymentRegionProperty: "region"                                                          # Name of the property that contains the VPC region
-  usernameProperty: "anypoint.username"                                                                # Name of the property that contains the Anypoint deployment username
-  passwordProperty: "anypoint.password"                                                                # Name of the property that contains the Anypoint deployment password
+  usernameProperty: "username"                                                                # Name of the property that contains the Anypoint deployment username
+  passwordProperty: "password"                                                                # Name of the property that contains the Anypoint deployment password
   workersProperty: "workers"                                                                  # Name of the property that contains the number of the workers
   workerTypeProperty: "workerType"                                                            # Name of the property that contains the size of the worker
   anypointPlatformEnvProperty: "env"                                        # Name of the property that contains the Anypoint environment
@@ -156,6 +156,6 @@ jobs:
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
         -D${{ env.anypointPlatformEnvProperty }}=${{ env.workflowEnv }}
-        -D${{ env.usernameProperty }}=${{ env.USERNAME }}
-        -D${{ env.passwordProperty }}=${{ env.PASSWORD }}
-        -D${{ env.anypointPlatformBusinessGroupProperty }}=${{ env.anypointPlatformBusinessGroup }}
+        "-D${{ env.usernameProperty }}=${{ env.USERNAME }}"
+        "-D${{ env.passwordProperty }}=${{ env.PASSWORD }}"
+        "-D${{ env.anypointPlatformBusinessGroupProperty }}=${{ env.anypointPlatformBusinessGroup }}"
