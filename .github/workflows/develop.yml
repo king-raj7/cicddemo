@@ -157,4 +157,5 @@ jobs:
         -D${{ env.deploymentRegionProperty }}=${{ env.region }}
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
+        -D${{ env.anypointPlatformEnvProperty }}=${{ env.workflowEnv }}
         -DskipTests
