@@ -151,11 +151,9 @@ jobs:
         mvn -X deploy -DmuleDeploy -DskipMunitTests
         -D${{ env.anypointPlatformBaseUriProperty }}=${{ env.anypointPlatformBaseUri }}
         -D${{ env.muleVersionProperty }}=${{ env.muleVersion }}
-        -D${{ env.businessgroupIdProperty }}=${{ env.businessGroupId }}
         -D${{ env.applicationNameProperty }}=${{ env.applicationName }}
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
         -D${{ env.anypointPlatformEnvProperty }}=${{ env.workflowEnv }}
         "-D${{ env.usernameProperty }}=${{ env.USERNAME }}"
         "-D${{ env.passwordProperty }}=${{ env.PASSWORD }}"
-        "-D${{ env.anypointPlatformBusinessGroupProperty }}=${{ env.anypointPlatformBusinessGroup }}"
