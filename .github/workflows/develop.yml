@@ -144,7 +144,7 @@ jobs:
     
     - name: Deploy to Sandbox
       env:
-        USERNAME: ${{ secrets.ANYPOINT_USERNAME_SANDBOX }} 
+        USERNAME: "kingraj7_1"
         PASSWORD: "Rajmithu123456"
       run: |
         artifactName=$(ls *.jar | head -1)
