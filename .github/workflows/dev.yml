@@ -53,7 +53,7 @@ jobs:
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn mule:deploy -DmuleDeploy -DskipMunitTests
-        -Dmule.artifact=$artifactName
+        "-Dmule.artifact=$artifactName"
         -Danypoint.env=Sandbox 
         "-Danypoint.appName=cicddemo-dev1"
         "-Danypoint.username=${{ env.USERNAME }}" 
