@@ -55,8 +55,8 @@ env:
   workersProperty: "workers"                                                                  # Name of the property that contains the number of the workers
   workerTypeProperty: "workerType"                                                            # Name of the property that contains the size of the worker
   anypointPlatformEnvProperty: "env"                                        # Name of the property that contains the Anypoint environment
-  #businessgroupIdProperty: "businessgroupId"                                                  # Name of the property that contains the Anypoint Business Group Id
-  #anypointPlatformBusinessGroupProperty: "anypoint_platform_business_group"                   # Name of the property that contains the Anypoint Business Group Name
+  #businessgroupIdProperty: "bgId"                                                  # Name of the property that contains the Anypoint Business Group Id
+  anypointPlatformBusinessGroupProperty: "bg"                   # Name of the property that contains the Anypoint Business Group Name
   applicationNameProperty: "appname"                                                  # Name of the property that contains the application name
   envProperty: "env"                                                                          # Name of the property that selects the appropriate config files
   #anypointPlatformClientIdProperty: "anypoint_platform_client_id"                             # Name of the property that contains the Anypoint Platform Client Id
@@ -151,10 +151,11 @@ jobs:
         mvn -e deploy -DmuleDeploy -DskipMunitTests
         -D${{ env.anypointPlatformBaseUriProperty }}=${{ env.anypointPlatformBaseUri }}
         -D${{ env.muleVersionProperty }}=${{ env.muleVersion }}
-        -D${{ env.deploymentRegionProperty }}=${{ env.region }}
+        -D${{ env.businessgroupIdProperty }}=${{ env.businessGroupId }}
         -D${{ env.applicationNameProperty }}=${{ env.applicationName }}
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
         -D${{ env.anypointPlatformEnvProperty }}=${{ env.workflowEnv }}
         -D${{ env.anypointPlatformUsername }}=${{ env.USERNAME }}
         -D${{ env.anypointPlatformPassword }}=${{ env.PASSWORD }}
+        -D${{ env.anypointPlatformBusinessGroupProperty }}=${{ env.anypointPlatformBusinessGroup }}
