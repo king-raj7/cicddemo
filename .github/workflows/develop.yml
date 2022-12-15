@@ -156,6 +156,6 @@ jobs:
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
         -D${{ env.anypointPlatformEnvProperty }}=${{ env.workflowEnv }}
-        -D${{ env.anypointPlatformUsername }}=${{ env.USERNAME }}
-        -D${{ env.anypointPlatformPassword }}=${{ env.PASSWORD }}
+        -D${{ env.usernameProperty }}=${{ env.USERNAME }}
+        -D${{ env.passwordProperty }}=${{ env.PASSWORD }}
         -D${{ env.anypointPlatformBusinessGroupProperty }}=${{ env.anypointPlatformBusinessGroup }}
