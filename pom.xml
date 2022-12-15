@@ -37,7 +37,7 @@
 						<password>${anypoint.password}</password>
 						<applicationName>${appname}</applicationName>
 						<environment>${env}</environment>
-						<!--region>${region}</region-->
+						<region>${region}</region>
 						<workers>${workers}</workers>
 						<workerType>${workerType}</workerType>
 						<objectStoreV2>true</objectStoreV2>
