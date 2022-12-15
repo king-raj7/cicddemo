@@ -54,11 +54,10 @@ jobs:
         artifactName=$(ls *.jar | head -1)
         mvn package deploy -DmuleDeploy -DskipMunitTests 
         -Danypoint.env=Sandbox 
-        -Danypoint.appName=cicddemo-dev1 
-        -Danypoint.username=${{ env.USERNAME }} 
-        -Danypoint.password=${{ env.PASSWORD }} 
-        -Danypoint.muleVersion=4.4.0 
-        -Danypoint.region=us-east-2 
+        "-Danypoint.appName=cicddemo-dev1"
+        "-Danypoint.username=${{ env.USERNAME }}" 
+        "-Danypoint.password=${{ env.PASSWORD }}"
+        -Danypoint.muleVersion=4.4.0
         -Danypoint.workers=1 
         -DworkerType=Micro
-        -DanypointPlatformBaseUri=${{ env.BASEURI }}
+        "-DanypointPlatformBaseUri=${{ env.BASEURI }}"
