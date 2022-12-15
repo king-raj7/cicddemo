@@ -151,8 +151,8 @@ jobs:
         mvn -X deploy -DmuleDeploy -DskipMunitTests
         -D${{ env.anypointPlatformBaseUriProperty }}=${{ env.anypointPlatformBaseUri }}
         -D${{ env.muleVersionProperty }}=${{ env.muleVersion }}
-        -D${{ env.anypointPlatformUsername }}=${{ secrets.ANYPOINT_USERNAME_SANDBOX }}
-        -D${{ env.anypointPlatformPassword }}=${{ secrets.ANYPOINT_PASSWORD_SANDBOX }}
+        -D${{ env.anypointPlatformUsername }}=${{ env.USERNAME }}
+        -D${{ env.anypointPlatformPassword }}=${{ env.PASSWORD }}
         -D${{ env.applicationNameProperty }}=${{ env.applicationName }}
         -D${{ env.workersProperty }}=${{ env.workers }}
         -D${{ env.workerTypeProperty }}=${{ env.workerType }}
