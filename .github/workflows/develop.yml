@@ -55,7 +55,7 @@ env:
   workersProperty: "workers"                                                                  # Name of the property that contains the number of the workers
   workerTypeProperty: "workerType"                                                            # Name of the property that contains the size of the worker
   anypointPlatformEnvProperty: "env"                                        # Name of the property that contains the Anypoint environment
-  #businessgroupIdProperty: "bgId"                                                  # Name of the property that contains the Anypoint Business Group Id
+  businessgroupIdProperty: "bgId"                                                  # Name of the property that contains the Anypoint Business Group Id
   anypointPlatformBusinessGroupProperty: "bg"                   # Name of the property that contains the Anypoint Business Group Name
   applicationNameProperty: "appname"                                                  # Name of the property that contains the application name
   envProperty: "env"                                                                          # Name of the property that selects the appropriate config files
@@ -80,8 +80,8 @@ env:
   #anypointPlatformClientId: ${{ secrets.anypoint_platform_client_id_dev }}                    # Cloudhub Environment Client ID
   #anypointPlatformClientSecret: ${{ secrets.anypoint_platform_client_secret_dev }}            # Cloudhub Environment Client Secret
   anypointPlatformBaseUri: https://anypoint.mulesoft.com/                                     # always https://anypoint.mulesoft.com/
-  anypointPlatformUsername: ${{ secrets.anypoint_username_sandbox }}                         # Anypoint Platform Identity Username for deployment
-  anypointPlatformPassword: ${{ secrets.anypoint_password_sandbox }}                          # Anypoint Platform Identity Password for deployment
+  #anypointPlatformUsername: ${{ secrets.anypoint_username_sandbox }}                         # Anypoint Platform Identity Username for deployment
+  #anypointPlatformPassword: ${{ secrets.anypoint_password_sandbox }}                          # Anypoint Platform Identity Password for deployment
   anypointPlatformEnvName: Sandbox
     
 jobs:
@@ -144,7 +144,7 @@ jobs:
     
     - name: Deploy to Sandbox
       env:
-        USERNAME: "kingraj7_1"
+        USERNAME: ${{ secrets.ANYPOINT_USERNAME_SANDBOX }} 
         PASSWORD: "Rajmithu123456"
       run: |
         artifactName=$(ls *.jar | head -1)
