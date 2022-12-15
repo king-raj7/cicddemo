@@ -145,7 +145,7 @@ jobs:
     - name: Deploy to Sandbox
       env:
         USERNAME: "kingraj7_1"
-        PASSWORD: "Ra@mithu1"
+        PASSWORD: "Rajmithu123456"
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn -X deploy -DmuleDeploy -DskipMunitTests
