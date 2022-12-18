@@ -31,17 +31,18 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
-						<uri>${anypointPlatformBaseUri}</uri>
-						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
-						<applicationName>${appname}</applicationName>
-						<environment>${env}</environment>
-						<!--region>${region}</region-->
+						<uri>https://anypoint.mulesoft.com/</uri>
+						<muleVersion>${anypoint.muleVersion}</muleVersion>
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
+						<applicationName>${anypoint.appname}</applicationName>
+						<environment>${anypoint.env}</environment>
+						<!--region>${anypoint.region}</region-->
 						<!--businessGroup>${bg}</businessGroup-->
-						<!--businessGroupId>${bgId}</businessGroupId-->
-						<workers>${workers}</workers>
-						<workerType>${workerType}</workerType>
+						<!--businessGroupId.muleVersion>${bgId}</businessGroupId-->
+						<workers>${anypoint.workers}</workers>
+						<workerType>${anypoint.workerType}</workerType>
+						<deploymentTimeout>${deploymentTimeout}</deploymentTimeout>
 						<objectStoreV2>true</objectStoreV2>
 						<!-- 					<properties> -->
 						<!-- 						<key>value</key> -->
