@@ -52,7 +52,7 @@ jobs:
         mvn deploy -DmuleDeploy \
         -Dmule.artifact=$artifactName \
         -Danypoint.env=Sandbox \
-        -Danypoint.appName=subbuxyz \
+        -Danypoint.appName=subbuxyzzz \
         -Danypoint.username=$USERNAME \
         -Danypoint.password=$PASSWORD \
         -Danypoint.muleVersion=4.4.0 \
