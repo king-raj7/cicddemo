@@ -45,8 +45,8 @@ jobs:
         name: artifacts
     - name: Deploy to CloudHub
       env:
-        USERNAME: ${{ secrets.ANYPOINT_USERNAME_SANDBOX }}
-        PASSWORD: ${{ secrets.ANYPOINT_PASSWORD_SANDBOX }}
+        USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
+        PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
@@ -54,7 +54,7 @@ jobs:
         -Danypoint.env=Sandbox \
         -Danypoint.appName=subbuxyz \
         -Danypoint.username=$USERNAME \
-        "-Danypoint.password=$PASSWORD" \
+        -Danypoint.password=$PASSWORD \
         -Danypoint.muleVersion=4.4.0 \
         -Danypoint.region=us-east-2 \
         -Danypoint.workers=1 \
