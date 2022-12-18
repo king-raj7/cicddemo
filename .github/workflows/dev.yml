@@ -54,7 +54,7 @@ jobs:
         -Danypoint.env=Sandbox \
         -Danypoint.appName=subbuxyz \
         -Danypoint.username=$USERNAME \
-        -Danypoint.password=$PASSWORD \
+        "-Danypoint.password=$PASSWORD" \
         -Danypoint.muleVersion=4.4.0 \
         -Danypoint.region=us-east-2 \
         -Danypoint.workers=1 \
