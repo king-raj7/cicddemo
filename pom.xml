@@ -19,11 +19,11 @@
 
 	<build>
 		<plugins>
-			<plugin>
+			<!--plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
-			</plugin>
+			</plugin-->
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -32,14 +32,18 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${app.runtime}</muleVersion>
+						<muleVersion>${anypoint.muleVersion}</muleVersion>
 						<username>${anypoint.username}</username>
 						<password>${anypoint.password}</password>
-						<applicationName>${appname}</applicationName>
-						<environment>${env}</environment>
-						<region>${region}</region>
-						<workers>${workers}</workers>
-						<workerType>${workerType}</workerType>
+						<applicationName>${anypoint.appname}</applicationName>
+						<environment>${anypoint.env}</environment>
+						<!--region>${anypoint.region}</region-->
+						<!--businessGroup>${bg}</businessGroup-->
+						<!--businessGroupId.muleVersion>${bgId}</businessGroupId-->
+						<workers>${anypoint.workers}</workers>
+						<workerType>Micro</workerType>
+						<deploymentTimeout>${deploymentTimeout}</deploymentTimeout>
+						<objectStoreV2>true</objectStoreV2>
 						<!-- 					<properties> -->
 						<!-- 						<key>value</key> -->
 						<!-- 					</properties> -->
