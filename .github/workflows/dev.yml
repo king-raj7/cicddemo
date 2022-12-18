@@ -58,6 +58,6 @@ jobs:
         -Danypoint.muleVersion=4.4.0 \
         -Danypoint.region=us-east-2 \
         -Danypoint.workers=1 \
-	-Danypoint.workerType=Micro \
         -DdeploymentTimeout=1000000 \
         -DskipTests
+	-Danypoint.workerType=Micro \
