@@ -41,7 +41,7 @@
 						<!--businessGroup>${bg}</businessGroup-->
 						<!--businessGroupId.muleVersion>${bgId}</businessGroupId-->
 						<workers>${anypoint.workers}</workers>
-						<workerType>${anypoint.workerType}</workerType>
+						<workerType>Micro</workerType>
 						<deploymentTimeout>${deploymentTimeout}</deploymentTimeout>
 						<objectStoreV2>true</objectStoreV2>
 						<!-- 					<properties> -->
