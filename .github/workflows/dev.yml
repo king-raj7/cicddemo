@@ -4,8 +4,8 @@ name: Workflow to deploy to cloud hub
 
 # Controls when the workflow will run
 on:
-  pull_request:
-    branches: [ "develop" ]
+  push:
+    branches: [ develop ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
