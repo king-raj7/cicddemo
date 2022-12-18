@@ -60,4 +60,3 @@ jobs:
         -Danypoint.workers=1 \
         -DdeploymentTimeout=1000000 \
         -DskipTests
-	-Danypoint.workerType=Micro \
